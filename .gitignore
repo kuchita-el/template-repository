@@ -1,0 +1,20 @@
+# OS-generated files only. Language/tool ignores (node_modules, __pycache__, etc.)
+# belong in each project, not in this language-agnostic L1 baseline.
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
