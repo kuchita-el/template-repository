@@ -1,7 +1,9 @@
 # EditorConfig — https://editorconfig.org
-# L1 baseline: editor-level basics only. These are the single source of truth for
-# whitespace/encoding; do not duplicate them in a formatter config (Prettier/Biome
-# read .editorconfig). Language-specific rules belong in each project.
+# L1 baseline: editor-level basics only. Keep these as the single source of truth
+# for whitespace/encoding rather than duplicating them in a formatter config.
+# Prettier reads .editorconfig automatically; Biome only when
+# formatter.useEditorconfig is true (default: false). Language-specific rules
+# belong in each project.
 root = true
 
 [*]
@@ -15,3 +17,8 @@ indent_size = 2
 # Markdown uses two trailing spaces for hard line breaks — keep them.
 [*.md]
 trim_trailing_whitespace = false
+
+# Makefile recipes require literal tabs; spaces break them ("missing separator").
+# Tool-agnostic and widely used, so absorbed into the L1 baseline.
+[{Makefile,*.mk}]
+indent_style = tab
